@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func Hello(s string) string {
-	return "Hello, " + s + "!"
+	const englishHelloPrefix = "Hello, "
+	return englishHelloPrefix + s + "!"
 }
 
 func main() {
