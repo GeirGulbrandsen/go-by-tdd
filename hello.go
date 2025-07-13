@@ -4,11 +4,11 @@ import "fmt"
 
 const englishHelloPrefix = "Hello, "
 
-func Hello(s string) string {
-	if s == "" {
-		s = "world"
+func Hello(name string) string {
+	if name == "" {
+		name = "world"
 	}
-	return englishHelloPrefix + s + "!"
+	return englishHelloPrefix + name + "!"
 }
 
 func main() {
