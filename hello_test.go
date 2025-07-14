@@ -14,9 +14,9 @@ func TestHello(t *testing.T) {
 		assertCorrectGreeting(t, got, want)
 
 	})
-	t.Run("says Elodie to Spanish people", func(t *testing.T) {
-		got := Hello("Geir", spanish)
-		want := "Elodie, Geir!"
+	t.Run("says Hola to Spanish people", func(t *testing.T) {
+		got := Hello("Elodie", spanish)
+		want := "Hola, Elodie!"
 		assertCorrectGreeting(t, got, want)
 	})
 	t.Run("says Hello in English if language is not recognized", func(t *testing.T) {
