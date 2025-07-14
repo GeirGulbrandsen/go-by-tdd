@@ -19,6 +19,17 @@ func TestHello(t *testing.T) {
 		want := "Hola, Elodie!"
 		assertCorrectGreeting(t, got, want)
 	})
+
+	t.Run("says Bonjour to French people", func(t *testing.T) {
+		got := Hello("Lola", french)
+		want := "Bonjour, Lola!"
+		assertCorrectGreeting(t, got, want)
+	})
+	t.Run("says Hei to Norwegian people", func(t *testing.T) {
+		got := Hello("Geir", norwegian)
+		want := "Hei, Geir!"
+		assertCorrectGreeting(t, got, want)
+	})
 	t.Run("says Hello in English if language is not recognized", func(t *testing.T) {
 		got := Hello("Geir", "Unrecognized")
 		want := "Hello, Geir!"
