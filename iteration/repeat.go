@@ -2,11 +2,9 @@ package iteration
 
 import "strings"
 
-const repeatCount = 5
-
-func Repeat(s string) string {
+func Repeat(s string, i int) string {
 	var repeated strings.Builder
-	for j := 0; j < repeatCount; j++ {
+	for range i {
 		repeated.WriteString(s)
 	}
 	return repeated.String()
