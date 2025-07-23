@@ -22,4 +22,12 @@ func TestSumAllTails(t *testing.T) {
 			t.Errorf("got %d want %d", got, want)
 		}
 	})
+	t.Run("can handle empty slices", func(t *testing.T) {
+		got := SumAllTails([]int{}, []int{3, 4, 5, 6})
+		want := []int{0, 15}
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("got %d want %d", got, want)
+		}
+	})
 }
