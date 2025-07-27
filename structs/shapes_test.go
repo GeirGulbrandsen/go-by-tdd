@@ -3,7 +3,8 @@ package structs
 import "testing"
 
 func TestPerimeter(t *testing.T) {
-	got := Perimeter(4.5, 5.5)
+	r := Rectangle{Width: 4.5, Height: 5.5}
+	got := Perimeter(r)
 	want := 20.0
 	if got != want {
 		t.Errorf("got = %v; want %v", got, want)
